@@ -18,24 +18,31 @@ const customers = () => {
           <h2 className="capitalize">Welcome back, Clint</h2>
         </div>
         <div className="p-4">
-          <div className="customerList m-auto p-4 border rounded-lg bg-white">
-            <div className="my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between items-center">
+          <div className="customerList m-auto sm:p-4 p-2 border rounded-lg bg-white">
+            <div className="sm:my-3 my-0 p-2 grid md:grid-cols-4 grid-cols-2 items-center">
               <span className="capitalize">name</span>
-              <span className="sm:block hidden capitalize">email</span>
-              <span className="sm:block hidden capitalize">last order</span>
-              <span className="capitalize">method</span>
+              <span className="md:block hidden capitalize">email</span>
+              <span className="md:block hidden capitalize">last order</span>
+              <span>
+                <span className="capitalize md:block sm:hidden block">
+                  email
+                </span>
+                <span className="capitalize lg:hidden md:hidden sm:block hidden ">
+                  email &amp; method
+                </span>
+              </span>
             </div>
             <ul>
               {data.map((order, id) => (
                 <li
                   key={id}
-                  className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 cursor-pointer"
+                  className="grid md:grid-cols-4 grid-cols-2 items-center justify-between bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 cursor-pointer"
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="bg-purple-100 p-3 rounded-lg">
+                  <div className="flex items-center">
+                    <div className="bg-purple-100 lg:p-3 p-1 rounded-lg">
                       <BsPersonFill className="text-purple-800" />
                     </div>
-                    <p className="pl-4">
+                    <p className="person lg:pl-4 pl-2">
                       {order.name.first + " " + order.name.last}
                     </p>
                   </div>
@@ -44,7 +51,7 @@ const customers = () => {
                   </p>
                   <p className="sm:block hidden">{order.date}</p>
                   <div className="flex justify-between items-center">
-                    <p>{order.method}</p>
+                    <p className="method">{order.method}</p>
                     <BsThreeDotsVertical />
                   </div>
                 </li>

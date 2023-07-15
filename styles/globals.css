@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.cList {
-  overflow-x: auto;
+@media only screen and (max-width: 575px) {
+  .person,
+  .method {
+    font-size: 14px;
+  }
 }

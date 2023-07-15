@@ -19,7 +19,7 @@ const orders = () => {
           <h2>Welcome Back, Clint</h2>
         </div>
         <div className="p-4">
-          <div className="cList w-full m-auto p-4 border rounded-lg bg-white">
+          <div className="w-full m-auto p-4 border rounded-lg bg-white">
             <div className="my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer">
               <span>Order</span>
               <span className="sm:text-left text-right">Status</span>
@@ -30,7 +30,7 @@ const orders = () => {
               {data.map((order, id) => (
                 <li
                   key={id}
-                  className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"
+                  className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid gap-x-1 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"
                 >
                   <div className="flex">
                     <div className="bg-purple-100 p-3 rounded-lg">
