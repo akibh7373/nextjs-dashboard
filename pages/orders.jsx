@@ -47,6 +47,7 @@ const orders = () => {
                   </div>
                   <p className="text-gray-600 sm:text-left text-right">
                     <span
+                      id="status"
                       className={
                         order.status == "Processing"
                           ? "bg-green-200 p-2 rounded-lg"

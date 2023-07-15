@@ -51,7 +51,7 @@ const customers = () => {
                   </p>
                   <p className="sm:block hidden">{order.date}</p>
                   <div className="flex justify-between items-center">
-                    <p className="method">{order.method}</p>
+                    <p className="methodTitle">{order.method}</p>
                     <BsThreeDotsVertical />
                   </div>
                 </li>
