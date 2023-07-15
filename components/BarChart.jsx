@@ -17,7 +17,7 @@ const BarChart = () => {
     labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
     datasets: [
       {
-        label: "Sales $",
+        label: "Sales $9,030",
         data: [18127, 22201, 19490, 17938, 24182, 22475],
         backgroundColor: "rgba(53, 162, 235, 0.4)",
         borderColor: "rgba(53, 162, 235)",
@@ -26,11 +26,8 @@ const BarChart = () => {
   };
 
   const options = {
+    maintainAspectRatio: false,
     scales: {
-      x: {
-        type: "category",
-        beginAtZero: true,
-      },
       y: {
         beginAtZero: true,
       },
@@ -47,13 +44,12 @@ const BarChart = () => {
           weight: "bold",
         },
       },
-      maintainAspectRatio: false,
       responsive: false,
     },
   };
 
   return (
-    <div className="w-full md:col-span-2 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white">
+    <div className="w-full md:col-span-2 relative lg:h-[70vh] h-[50vh] m-auto lg:p-4 p-1 border rounded-lg bg-white">
       <Bar data={data} options={options} />
     </div>
   );

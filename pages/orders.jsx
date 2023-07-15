@@ -19,12 +19,12 @@ const orders = () => {
           <h2>Welcome Back, Clint</h2>
         </div>
         <div className="p-4">
-          <div className="w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto">
+          <div className="cList w-full m-auto p-4 border rounded-lg bg-white">
             <div className="my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer">
               <span>Order</span>
               <span className="sm:text-left text-right">Status</span>
-              <span className="hidden md:grid">Last Order</span>
-              <span className="hidden sm:grid">Method</span>
+              <span className="lg:block hidden">Last Order</span>
+              <span className="lg:block hidden">Method</span>
             </div>
             <ul>
               {data.map((order, id) => (
@@ -58,7 +58,7 @@ const orders = () => {
                       {order.status}
                     </span>
                   </p>
-                  <p className="hidden md:flex">{order.date}</p>
+                  <p className="sm:block hidden">{order.date}</p>
                   <div className="sm:flex hidden justify-between items-center">
                     <p>{order.method}</p>
                     <BsThreeDotsVertical />

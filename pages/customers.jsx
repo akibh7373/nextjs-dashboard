@@ -13,25 +13,25 @@ const customers = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="bg-gray-100 min-h-screen">
-        <div className="flex justify-between p-4">
+        <div className="flex justify-between px-4 pt-4">
           <h2 className="capitalize">Customer</h2>
           <h2 className="capitalize">Welcome back, Clint</h2>
         </div>
         <div className="p-4">
-          <div className="w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto">
-            <div className="my-3 p-2 grid md:grid-cols-4 sm-grid-cols-3 grid-cols-2 items-center cursor-pointer">
+          <div className="customerList m-auto p-4 border rounded-lg bg-white">
+            <div className="my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between items-center">
               <span className="capitalize">name</span>
-              <span className="sm:text-left text-right capitalize">email</span>
-              <span className="hidden md:grid capitalize">last order</span>
-              <span className="hidden sm:grid capitalize">method</span>
+              <span className="sm:block hidden capitalize">email</span>
+              <span className="sm:block hidden capitalize">last order</span>
+              <span className="capitalize">method</span>
             </div>
             <ul>
               {data.map((order, id) => (
                 <li
                   key={id}
-                  className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer"
+                  className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 cursor-pointer"
                 >
-                  <div className="flex items-center">
+                  <div className="flex items-center justify-between">
                     <div className="bg-purple-100 p-3 rounded-lg">
                       <BsPersonFill className="text-purple-800" />
                     </div>
@@ -39,11 +39,11 @@ const customers = () => {
                       {order.name.first + " " + order.name.last}
                     </p>
                   </div>
-                  <p className="text-gray-600 sm:text-left text-right">
+                  <p className="sm:block hidden text-gray-600">
                     {order.name.first}@email.com
                   </p>
-                  <p className="hidden md:flex">{order.date}</p>
-                  <div className="sm:flex hidden justify-between items-center">
+                  <p className="sm:block hidden">{order.date}</p>
+                  <div className="flex justify-between items-center">
                     <p>{order.method}</p>
                     <BsThreeDotsVertical />
                   </div>
