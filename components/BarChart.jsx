@@ -17,7 +17,7 @@ const BarChart = () => {
     labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
     datasets: [
       {
-        label: "Sales $9,030",
+        label: "Sales $",
         data: [18127, 22201, 19490, 17938, 24182, 22475],
         backgroundColor: "rgba(53, 162, 235, 0.4)",
         borderColor: "rgba(53, 162, 235)",

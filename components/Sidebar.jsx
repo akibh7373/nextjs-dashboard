@@ -6,7 +6,7 @@ import { FiSettings } from "react-icons/fi";
 const Sidebar = ({ children }) => {
   return (
     <div className="flex">
-      <div className="fixed lg:w-20 md:w-20 w-16 h-screen lg:p-4 p-2 bg-white border-r-[1px] flex flex-col justify-between">
+      <div className="fixed lg:w-20 md:w-20 w-16 h-screen lg:p-4 p-4 bg-white border-r-[1px] flex flex-col justify-between">
         <div className="flex flex-col items-center">
           <Link href="/">
             <div className="inline-block lg:mb-2 mb-2 lg:p-4 p-2 rounded-lg bg-purple-800 text-white">
