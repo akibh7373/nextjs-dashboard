@@ -21,11 +21,11 @@ const customers = () => {
           <div className="customerList m-auto sm:p-4 p-2 border rounded-lg bg-white">
             <div className="sm:my-3 my-0 p-2 grid md:grid-cols-4 grid-cols-2 items-center">
               <span className="capitalize">name</span>
-              <span className="md:block hidden capitalize">email</span>
+              <span className="md:blocks hidden capitalize">email</span>
               <span className="md:block hidden capitalize">last order</span>
               <span>
                 <span className="capitalize md:block sm:hidden block">
-                  email
+                  Method
                 </span>
                 <span className="capitalize lg:hidden md:hidden sm:block hidden ">
                   email &amp; method
